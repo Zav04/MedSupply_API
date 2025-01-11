@@ -25,11 +25,4 @@ def server_info():
     })
 
 if __name__ == '__main__':
-    # Configurar host, porta e modo debug
-    host = os.getenv('FLASK_RUN_HOST', '127.0.0.1')  # Default: localhost
-    port = int(os.getenv('FLASK_RUN_PORT', 5000))     # Default: porta 5000
-    debug = env == 'development'                     # Ativar debug apenas no ambiente de desenvolvimento
-    
-    print(f"Starting app in {env} mode...")
-    print(f"Server running at http://{host}:{port}")
-    app.run(host=host, port=port, debug=debug)
+    app.run()
